@@ -1,0 +1,31 @@
+#--- Создание локального git репозитория:
+git init
+
+#--- Создание файла .gitignore:
+echo "sunpp/" > .gitignore
+echo "new_folder/" >> .gitignore
+echo "sunpp/" >> .gitignore
+
+#--- Добавление всех файлов, кроме игнорируемых:
+git add .
+
+#--- Создание первого коммита:
+git commit -m "Initial commit"
+
+#---Создание репозитория на GitHub:
+
+# 1 Перейдите на GitHub и войдите в свой аккаунт
+# 2 Нажмите "+" в верхнем правом углу и выберите "New repository"
+# 3 Введите имя репозитория и другие настройки
+#   Не инициализируйте репозиторий с README, .gitignore или лицензией
+# 4 Нажмите "Create repository"
+# 5 Связывание локального репозитория с удаленным
+#   (замените YOUR_USERNAME и YOUR_REPO_NAME):
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+
+#--- Отправка (push) локального репозитория на GitHub:
+git push -u origin master
+
+
+# Если вы используете аутентификацию по SSH вместо HTTPS,
+# замените URL в шаге 6 на SSH-версию.
